@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mAS-nd-tud">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Fcm-wR-rCp"/>
+                                </constraints>
+                            </mapView>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="B8M-0N-8Xq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="6tm-Mj-GSI"/>
+                                </constraints>
+                                <color key="separatorColor" red="0.086274512110000007" green="0.73333334920000004" blue="0.1647058874" alpha="1" colorSpace="deviceRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseList" textLabel="bAS-6w-M3T" detailTextLabel="XSg-7S-AZ0" style="IBUITableViewCellStyleSubtitle" id="7Wy-sh-7WR">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAS-6w-M3T">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSg-7S-AZ0">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.12862962595734789" green="0.50196078431372548" blue="0.45037476008823485" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="lxp-uc-45I"/>
+                                    <outlet property="delegate" destination="2" id="AXC-Ck-OzB"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B8M-0N-8Xq" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="7am-ty-3e8"/>
+                            <constraint firstItem="mAS-nd-tud" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="EG4-8P-ZI9"/>
+                            <constraint firstItem="B8M-0N-8Xq" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="UTw-Ww-2Ra"/>
+                            <constraint firstItem="mAS-nd-tud" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="fd8-0d-0BJ"/>
+                            <constraint firstItem="mAS-nd-tud" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="jW5-HQ-Eh4"/>
+                            <constraint firstItem="B8M-0N-8Xq" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="zuQ-Zc-2uA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="mAS-nd-tud" id="KyM-xj-7UJ"/>
+                        <outlet property="tableView" destination="B8M-0N-8Xq" id="nVg-CB-AtR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138" y="-75"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
